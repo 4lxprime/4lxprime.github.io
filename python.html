@@ -212,4 +212,28 @@
             <p>- IDE = Un environnement de développement intégré</p>
         </div>
     </body>
+    <script>
+        function showPopup() {
+            var popup = document.createElement("div");
+            popup.innerHTML = "Ce site a été créer dans le cadre de l'oral du Brevet des colleges";
+            popup.style.fontSize = "20px"
+            popup.style.position = "fixed";
+            popup.style.top = "0";
+            popup.style.left = "50%";
+            popup.style.transform = "translateX(-50%)";
+            popup.style.backgroundColor = "#fff";
+            popup.style.padding = "10px";
+            popup.style.border = "1px solid #000";
+            popup.style.borderRadius = "16px";
+
+            setTimeout(function() {
+                document.body.appendChild(popup);
+            }, 100);
+
+            setTimeout(function() {
+                document.body.removeChild(popup);
+            }, 2000);
+        }
+        window.onload = showPopup()
+    </script>
 </html>
